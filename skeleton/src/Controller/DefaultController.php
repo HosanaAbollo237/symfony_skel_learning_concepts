@@ -10,11 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller {
 
     /**
-     * @Route("/")
+     * @Route("/home")
      */
     public function index(){
-        return new Response(
-            $content = "<h1>Hello World</h1>"
-        );
+        return $this->render('default/test/index.html.twig');
     }
 }
